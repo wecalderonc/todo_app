@@ -1,13 +1,8 @@
-<%= form_for(@task) do |f| %>
-  <%= f.label :title %>
-  <%= f.text_field :title%>
-
-  <%= f.label :details %>
-  <%= f.text_field :details %>
-  <% if @edit %>
-    <%= f.label :completed %>
-    <%= f.check_box :completed %>
-
-  <% end %>
-  <%= f.submit %>
+<%= simple_form_for (@task) do |f| %>
+  <%= f.input :title %>
+  <%= f.input :details %>
+  <%= f.input :completed,     as: :boolean %>
+  <%= f.submit "Agregar", class: "btn btn-primary" %>
 <% end %>
+
+<%= link_to "Regresar a Listado de Tareas", tasks_path %>
