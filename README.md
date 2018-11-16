@@ -6,6 +6,7 @@ Después de clonar el proyecto
 
 1. Sin Docker
   * cd todo_app
+  * rails db:migrate
   * rails s
   * Abrir en navegador localhost:3000/tasks
 
@@ -13,7 +14,7 @@ Después de clonar el proyecto
   * docker build -t todoapp .
   * docker run -p 3000:3000 todoapp
   * Abrir en navegador localhost:3000/tasks
-  
-  
-  
- 
+
+
+
+
