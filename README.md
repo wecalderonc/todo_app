@@ -1,24 +1,19 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Aplicación Sencilla de prueba para Creación, Edición, Actualización, y Eliminación de Tareas (TODO)
 
-Things you may want to cover:
+Después de clonar el proyecto
 
-* Ruby version
+1. Sin Docker
+  * cd todo_app
+  * rails s
+  * Abrir en navegador localhost:3000/tasks
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+2. Con Docker
+  * docker build -t todoapp .
+  * docker run -p 3000:3000 todoapp
+  * Abrir en navegador localhost:3000/tasks
+  
+  
+  
+ 
