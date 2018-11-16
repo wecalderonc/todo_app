@@ -1,5 +1,9 @@
-<h1><%= @task.title.capitalize %></h1>
+<h1>Título: <%= @task.title.capitalize %></h1>
 <h2>Descripción: <%= @task.details %></h2>
-<h3>Tarea Completada? <%= @task.completed %></h3>
-<%= link_to "Editar Tarea",  edit_task_path%>
+<h3>Completada: <% if @task.completed %>
+     <i class="fas fa-check-circle"></i>
+     <% else %>
+     <i class="far fa-circle"></i>
+     <% end %></h3>
+<%= link_to "Editar Tarea",  edit_task_path%> <br>
 <%= link_to "Regresar a Listado de Tareas", tasks_path %>
