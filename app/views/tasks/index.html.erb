@@ -1,20 +1,25 @@
-  <h1>LISTA DE TAREAS</h1>
+  <h1 class="todo_list_title">LISTA DE TAREAS - TODO APP MANAGEMENT</h1>
   <% @tasks.each do |task|%>
-  <ul>
-    <li><% if task.completed %>
-     <i class="fas fa-check-circle"></i>
-     <% else %>
-     <i class="far fa-circle"></i>
-     <% end %>
-     <%= link_to task.title, task_path(task)  %>
+  <div class="index_row clearfix">
+    <ul class="no-bullets">
+      <li><h2 class="todo_list_title"><% if task.completed %>
+       <i class="fas fa-check-circle"></i>
+       <% else %>
+       <i class="far fa-circle"></i>
+       <% end %></h2>
+       <h2 class="todo_list_title"><%= link_to task.title, task_path(task)  %></h2>
 
 
-     <%= link_to '<i class="fas fa-trash-alt"></i>'.html_safe, task_path(task),
-     method: :delete,
-     data: { confirm: "Confirma eliminación de tarea?" }
-     %>
-   </li>
- </ul>
+       <h2 class="todo_list_title"><%= link_to '<i class="fas fa-trash-alt"></i>'.html_safe, task_path(task),
+       method: :delete,
+       data: { confirm: "Confirma eliminación de tarea?" }
+       %></h2>
+     </li>
+   </ul>
+ </div>
  <% end %>
- <%= link_to "Click para crear Nueva Tarea", new_task_path %>
+
+ <div class="links">
+   <%= link_to "Click para crear Nueva Tarea", new_task_path %>
+ </div>
 
