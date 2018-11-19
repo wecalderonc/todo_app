@@ -1,8 +1,17 @@
-<%= simple_form_for (@task) do |f| %>
-  <%= f.input :title %>
-  <%= f.input :details %>
-  <%= f.input :completed,     as: :boolean %>
-  <%= f.submit "Agregar", class: "btn btn-primary" %>
-<% end %>
+<div class="forms">
+  <%= simple_form_for (@task) do |f| %>
+  <%= f.input :title, label: 'Título' %>
+  <%= f.input :details, label: 'Descripción' %>
+  <%= f.input :completed,     as: :boolean, label: 'Completada' %>
+    <% if @edit %>
+      <%= f.submit "Actualizar", class: "btn btn-primary" %>
+    <% else %>
+      <%= f.submit "Agregar", class: "btn btn-primary" %>
+    <% end %>
+  <% end %>
+</div>
 
-<%= link_to "Regresar a Listado de Tareas", tasks_path %>
+<div class="links">
+  <%= link_to "Regresar a Listado de Tareas", tasks_path %>
+</div>
+
